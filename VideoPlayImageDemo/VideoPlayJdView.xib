@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="VideoPlayJdView">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="24"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlq-Tu-n5J">
+                    <rect key="frame" x="303" y="3" width="39" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="0gr-ge-htz"/>
+                        <constraint firstAttribute="width" constant="39" id="GMW-UT-dIS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7GZ-da-bu8">
+                    <rect key="frame" x="57" y="13" width="238" height="2"/>
+                    <color key="tintColor" red="1" green="0.065906515588740389" blue="0.10156881687767882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="3bD-OD-LKg"/>
+                    </constraints>
+                    <color key="progressTintColor" red="1" green="0.065906515590000006" blue="0.1015688169" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </progressView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFr-qI-aKn">
+                    <rect key="frame" x="8" y="3" width="41" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="dZu-az-2S5"/>
+                        <constraint firstAttribute="width" constant="41" id="kYT-x9-Saq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="HFr-qI-aKn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="4Yl-cU-D9e"/>
+                <constraint firstAttribute="bottom" secondItem="HFr-qI-aKn" secondAttribute="bottom" id="5rC-tr-2Cu"/>
+                <constraint firstAttribute="trailing" secondItem="hlq-Tu-n5J" secondAttribute="trailing" constant="8" id="CIY-Wh-mTq"/>
+                <constraint firstItem="7GZ-da-bu8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="57" id="O8w-o7-96g"/>
+                <constraint firstAttribute="trailing" secondItem="7GZ-da-bu8" secondAttribute="trailing" constant="55" id="Q7g-qb-7DT"/>
+                <constraint firstItem="HFr-qI-aKn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="3" id="Qe5-rL-1Qo"/>
+                <constraint firstAttribute="bottom" secondItem="hlq-Tu-n5J" secondAttribute="bottom" id="UHf-Eg-dKq"/>
+                <constraint firstItem="hlq-Tu-n5J" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="3" id="f48-kL-PkP"/>
+                <constraint firstItem="7GZ-da-bu8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="13" id="sL2-fM-efN"/>
+                <constraint firstAttribute="bottom" secondItem="7GZ-da-bu8" secondAttribute="bottom" constant="9" id="x7c-Kp-kcK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="jdView" destination="7GZ-da-bu8" id="YIh-Az-fhu"/>
+                <outlet property="lb_allTime" destination="hlq-Tu-n5J" id="v6r-Jv-dwf"/>
+                <outlet property="lb_playTime" destination="HFr-qI-aKn" id="ScT-KB-IiV"/>
+            </connections>
+            <point key="canvasLocation" x="15" y="-17"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wX1-zX-DC3" customClass="VideoPlayImage">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="247"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="247" id="dl9-ds-ASa"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xC0-Fp-Cx1">
+                                <rect key="frame" x="90" y="317" width="195" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="73y-yX-2Qe"/>
+                                    <constraint firstAttribute="width" constant="195" id="qpo-Du-S3g"/>
+                                </constraints>
+                                <state key="normal" title="添加弹幕"/>
+                                <connections>
+                                    <action selector="btAddDanmuClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gKW-UX-kDi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wX1-zX-DC3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="W9C-ef-G58"/>
+                            <constraint firstItem="wX1-zX-DC3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="b9N-OI-fhg"/>
+                            <constraint firstAttribute="trailing" secondItem="wX1-zX-DC3" secondAttribute="trailing" id="fcw-hC-Iyc"/>
+                            <constraint firstItem="xC0-Fp-Cx1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iAs-8b-fJd"/>
+                            <constraint firstItem="xC0-Fp-Cx1" firstAttribute="top" secondItem="wX1-zX-DC3" secondAttribute="bottom" constant="70" id="puS-Rz-xNs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="VideoScreenShortImage" destination="wX1-zX-DC3" id="iWI-2f-Zcw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-44" y="111.99400299850076"/>
+        </scene>
+    </scenes>
+</document>
